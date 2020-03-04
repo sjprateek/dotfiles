@@ -49,11 +49,16 @@ export EDITOR=vim
 export HISTCONTROL=ignoredups
 
 # Aliases
+if [ "$(uname)" == "Darwin" ]; then
+    alias ls='ls -G'
+    alias ll="ls -lhA -G"
+else
+    alias ls='ls --color=always'
+    alias ll="ls -lhA --color=always"
+fi
 alias ssh="ssh -X"
 alias h=history
 alias vi="vim"
-alias ls='ls --color=always'
-alias ll="ls -lhA --color=always"
 alias l=ll
 alias csd="cscope -d -p8"
 alias vnc='vncserver -randr 1920x1080,3840x2030,1080x1800,3360x1760'
