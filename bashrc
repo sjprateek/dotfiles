@@ -48,6 +48,10 @@ export VISUAL=vim
 export EDITOR=vim
 export HISTCONTROL=ignoredups
 
+if [ "$(uname)" == "Darwin" ]; then
+    export MORE=R
+fi
+
 # Aliases
 if [ "$(uname)" == "Darwin" ]; then
     alias ls='ls -G'
