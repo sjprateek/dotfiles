@@ -1,3 +1,16 @@
 [submodule "dotbot"]
 	path = dotbot
 	url = https://github.com/anishathalye/dotbot
+	ignore = dirty
+[submodule "zsh/plugins/minimal"]
+	path = zsh/plugins/minimal
+	url = https://github.com/subnixr/minimal
+[submodule "zsh/plugins/zplug"]
+	path = zsh/plugins/zplug
+	url = https://github.com/zplug/zplug
+[submodule "zsh/plugins/zsh-autosuggestions"]
+	path = zsh/plugins/zsh-autosuggestions
+	url = https://github.com/zsh-users/zsh-autosuggestions
+[submodule "zsh/plugins/zsh-syntax-highlighting"]
+	path = zsh/plugins/zsh-syntax-highlighting
+	url = https://github.com/zsh-users/zsh-syntax-highlighting

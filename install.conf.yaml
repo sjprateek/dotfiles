@@ -1,0 +1,22 @@
+- defaults:
+    link:
+      relink: true
+
+- clean: ['~']
+
+- link:
+    ~/.dotfiles: ''
+    ~/.tmux.conf: tmux.conf
+    ~/.vim: vim
+    ~/.vimrc: vimrc
+    ~/.zsh: zsh
+    ~/.zshrc: zshrc
+    ~/.gitconfig: gitconfig
+    ~/.bashrc: bashrc
+    ~/.bash_profile: bash_profile
+    ~/.bash_ls_colors: bash_ls_colors
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
+  - [curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim, Download plug.vim]
+  - [ $(which vim) +PlugInstall +qall, Installing Vim Plug Plugins ]
