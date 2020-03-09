@@ -80,6 +80,7 @@ if [ `echo $HOSTNAME | grep kvm` ] ; then
 fi
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+[ -f ~/.bash_ls_colors ] && source ~/.bash_ls_colors
 
 if [ -f ~/.bashrc_local ]; then
         source ~/.bashrc_local
