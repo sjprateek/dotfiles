@@ -9,9 +9,10 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'morhetz/gruvbox'
 Plug 'tpope/vim-fugitive'
-Plug 'octol/vim-cpp-enhanced-highlight'
-Plug 'vimwiki/vimwiki'
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'vimwiki/vimwiki'
+" Plug 'vifm/vifm.vim'
+" Plug 'octol/vim-cpp-enhanced-highlight'
 " Plug 'jeetsukumaran/vim-buffergator'
 " Plug 'rhysd/vim-clang-format'
 " Plug 'nathanaelkane/vim-indent-guides'
@@ -42,11 +43,6 @@ syntax on                               " enable syntax highlighting
 set number                              " turn line numbers on
 set ruler                               " enable the ruler
 set comments=sl:/*,mb:\ *,elx:\ */      " intelligent comments
-" set colorcolumn=80                    " 80 character limit reference line
-" set laststatus=2                      " always show status bar
-" set noshowmode                        " don't show insert at bottom
-" set termguicolors                     " use full color in the terminal
-" set nowrap                            " disable word wrapping
 set backspace=indent,eol,start          " make backspace work
 set enc=utf-8                           " set UTF-8 encoding
 set fenc=utf-8                          " set UTF-8 encoding
@@ -54,10 +50,16 @@ set termencoding=utf-8                  " set UTF-8 encoding
 set mouse=a                             " enable mouse use in vim
 set list                                " to show extra tabs, whitespaces
 set lazyredraw                          " enable lazyredraw
-set nocursorline                        " disable cursorline
+set cursorline                          " highlight cursor line
 set ttyfast                             " enable fast terminal connection
 set wildmenu wildmode=longest:full,full " wildmode settings
 let mapleader = "\\"                    " use \ as leader key
+
+" set colorcolumn=80                    " 80 character limit reference line
+" set laststatus=2                      " always show status bar
+" set noshowmode                        " don't show insert at bottom
+" set termguicolors                     " use full color in the terminal
+" set nowrap                            " disable word wrapping
 
 " Mouse works on large screens in 'sgr' mode
 if has("mouse_sgr")
@@ -160,7 +162,7 @@ hi EndOfBuffer ctermfg=237 ctermbg=235
 hi LineNr term=bold cterm=NONE ctermfg=Grey ctermbg=NONE gui=NONE guifg=Grey guibg=NONE
 
 " ----------Vimwiki settings---------------------
-let g:vimwiki_list = [{'path':'~/vimwiki', 'path_html':'~/WWW'}]
+" let g:vimwiki_list = [{'path':'~/vimwiki', 'path_html':'~/WWW'}]
 
 " -----------------------------------------------
 " Disable tmux navi when zooming the Vim pane
