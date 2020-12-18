@@ -66,9 +66,11 @@ fi
 if [ "$(uname)" == "Darwin" ]; then
     alias ls='ls -G'
     alias ll="ls -lhA -G"
+    alias l.="ls -d .*"
 else
     alias ls='ls --color=always'
     alias ll="ls -lhA --color=always"
+    alias l.="ls -d .* --color=auto"
 fi
 alias ssh="ssh -X"
 alias h=history
